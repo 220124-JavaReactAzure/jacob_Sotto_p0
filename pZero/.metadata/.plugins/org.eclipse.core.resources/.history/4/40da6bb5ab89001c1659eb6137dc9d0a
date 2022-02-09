@@ -34,7 +34,6 @@ public class UserService {
 			if(!usernameAvailable && emailAvailable) {
 				throw new ResourcePersistenceException("The provided username was already taken");
 				
-				
 			}else if(usernameAvailable) {
 				throw new ResourcePersistenceException("The provided eamil was already taken");
 				

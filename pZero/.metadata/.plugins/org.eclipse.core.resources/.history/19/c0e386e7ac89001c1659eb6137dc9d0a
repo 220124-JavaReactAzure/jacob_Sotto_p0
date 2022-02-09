@@ -17,7 +17,9 @@ public class Support extends Menu{
 	public void render() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("Sorry we do not do that here");
+		System.out.println("Shutting down...");
 		shutdown();
+		router.transfer("/welcome");
 		
 	}
 	

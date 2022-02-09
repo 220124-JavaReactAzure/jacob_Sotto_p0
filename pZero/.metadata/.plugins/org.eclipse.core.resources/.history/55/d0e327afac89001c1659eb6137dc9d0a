@@ -62,11 +62,9 @@ public class AppState {
 		}
 	}
 	
-	//when called, the program will stop
+	//wwhen called, the program will stop
 	public static void shutdown() {
 		isRunning = false;
-		System.out.println("Shutting Down...");
-		System.exit(0);
 	}
 	
 }
