@@ -1,0 +1,23 @@
+package com.revature.p0.services;
+
+import com.revature.p0.daos.UserDao;
+import com.revature.p0.models.Users;
+
+public class UserService {
+
+	private final UserDao userDao;
+	private Users sessionUser;
+	
+	public UserService (UserDao userDao) {
+		this.userDao = userDao;
+		this.sessionUser = null;
+	}
+	public boolean regiserNewUser(Users newUser) {
+		
+		return true;
+	}
+	
+	public Users getSessionUser() {
+		return sessionUser;
+	}
+}

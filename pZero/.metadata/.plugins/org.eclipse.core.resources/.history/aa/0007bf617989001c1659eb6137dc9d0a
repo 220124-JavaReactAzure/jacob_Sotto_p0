@@ -1,0 +1,28 @@
+package com.revature.p0.menus;
+
+import java.io.BufferedReader;
+
+import com.revature.p0.daos.BankAccountDao;
+import com.revature.p0.models.BankAccount;
+import com.revature.p0.services.BankService;
+import com.revature.p0.util.MenuRouter;
+
+public class BankInfo extends Menu{
+	private final BankAccount bankAccount;
+	public BankInfo(BufferedReader consoleReader, MenuRouter router, BankAccount bankAccount) {
+		super("BankInfo", "/bank-info", consoleReader, router);
+		this.bankAccount = bankAccount;
+	}
+
+	@Override
+	public void render() throws Exception {
+		System.out.println("User chose to view Bank information");
+		System.out.println("User id: " + bankAccount.getOwner().getUserId() + "\n");
+		System.out.println("Bank id: " + bankAccount.getBankId() + "\n");
+		System.out.println("Your balance: " + bankAccount.getBankBalance() +"\n");
+		
+		System.out.println("Returning back to Dashboard");
+		router.transfer("/dashboard");
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.revature.p0.services;
+
+import com.revature.p0.models.Users;
+
+public class BankService {
+
+	public boolean regiserNewUser(Users newUser) {
+		
+		return true;
+	}
+}

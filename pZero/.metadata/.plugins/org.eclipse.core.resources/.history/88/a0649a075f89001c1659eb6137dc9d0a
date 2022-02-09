@@ -1,0 +1,39 @@
+package com.revature.p0.menus;
+
+import java.io.BufferedReader;
+
+import com.revature.p0.models.Users;
+import com.revature.p0.services.UserService;
+import com.revature.p0.util.MenuRouter;
+
+public class Dashboard extends Menu{
+	
+	private final UserService userService;
+	public Dashboard(BufferedReader consoleReader, MenuRouter router, UserService userService) {
+		super("Dashboard", "/dashboard", consoleReader, router);
+		this.userService = userService;
+	}
+
+	@Override
+	public void render() throws Exception {
+		
+		Users sessionUser = userService.getSessionUser();
+		
+		if(sessionUser == null) {
+			System.out.println("You are currently not logged in. Returning you to the login screen!");
+			router.transfer("/login");
+			return;
+		}
+		
+		while(userService.isSessionActive()) {
+			System.out.println("WWelcome " + sessionUser.getUsername());
+			String menu = "1) View Bank Information\n" +
+			"2) Deposit\n " +
+					"3) Withdraw\n" +
+			"4) Support \n"+
+					"> ";
+			
+		}
+		
+	}
+}

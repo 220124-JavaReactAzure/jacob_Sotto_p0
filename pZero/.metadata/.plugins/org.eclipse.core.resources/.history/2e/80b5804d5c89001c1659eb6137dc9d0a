@@ -1,0 +1,22 @@
+package com.revature.p0.menus;
+
+import java.io.BufferedReader;
+
+import com.revature.p0.util.MenuRouter;
+
+public class Register extends Menu{
+	//private final BankService
+		public Register(BufferedReader consoleReader, MenuRouter router) {
+			super("Resgister", "/Register", consoleReader, router);
+		}
+
+		@Override
+		public void render() throws Exception {
+			System.out.println("Please enter your credentials to create your bank account.");
+			System.out.println("Username: ");
+			String username = consoleReader.readLine();
+			System.out.println("Password: ");
+			String password = consoleReader.readLine();
+			
+		}
+}

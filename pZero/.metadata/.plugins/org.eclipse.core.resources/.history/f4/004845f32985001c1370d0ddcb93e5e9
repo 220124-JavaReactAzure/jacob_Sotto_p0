@@ -1,0 +1,14 @@
+package com.revature.p0.menus;
+
+public class Welcome extends Menu{
+
+	public Welcome(MenuRouter router) {
+		
+	}
+	@Override
+	public void render() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

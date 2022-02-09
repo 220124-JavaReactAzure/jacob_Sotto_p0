@@ -1,0 +1,21 @@
+package com.revature.p0.menus;
+
+import java.io.BufferedReader;
+
+import com.revature.p0.services.BankService;
+import com.revature.p0.util.MenuRouter;
+
+public class BankInfo extends Menu{
+	private final BankService bankService;
+	public BankInfo(BufferedReader consoleReader, MenuRouter router, BankService bankService) {
+		super("BankInfo", "/bank-info", consoleReader, router);
+		this.bankService = bankService;
+	}
+
+	@Override
+	public void render() throws Exception {
+		System.out.println("User chose to view Bank information");
+		System.out.println("User id: " );
+		
+	}
+}

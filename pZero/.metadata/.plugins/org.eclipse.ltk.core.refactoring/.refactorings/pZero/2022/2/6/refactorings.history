@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;pZero&apos;&#x0D;&#x0A;- Original project: &apos;pZero&apos;&#x0D;&#x0A;- Original element: &apos;com.revature.p0.util.Collection.java&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.revature.p0.util{Collection.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1644011474223" subPackages="false" version="1.0"/>
+</session>

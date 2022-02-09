@@ -1,0 +1,24 @@
+package com.revature.p0.services;
+
+import com.revature.p0.daos.BankAccountDao;
+import com.revature.p0.models.BankAccount;
+
+public class BankService {
+	private final BankAccountDao bAccountDao;
+	private final UserService userService;
+	
+	public BankService(BankAccountDao bAccountDao, UserService userService) {
+		this.bAccountDao = bAccountDao;
+		this.userService = userService;
+	}
+	
+	public void createBankAccount(BankAccount newBAccount) {
+		
+	}
+	
+	private boolean isBankAccountValid(BankAccount newBAccount) {
+		if(newBAccount == null) return false;
+		if(newBAccount.getBankId()==null) return false;
+		return newBAccount.getOwner() != null;
+	}
+}

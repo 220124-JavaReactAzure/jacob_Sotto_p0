@@ -1,0 +1,16 @@
+package com.revature.p0.services;
+
+import com.revature.p0.models.Users;
+
+public class UserService {
+
+	private Users sessionUser;
+	public boolean regiserNewUser(Users newUser) {
+		
+		return true;
+	}
+	
+	public Users getSessionUser() {
+		return sessionUser;
+	}
+}

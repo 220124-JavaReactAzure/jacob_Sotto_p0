@@ -1,0 +1,27 @@
+package com.revature.p0.util.collections;
+
+public class LinkedList<T> implements List<T> {
+
+	private int size;
+	private Node<T> head;
+	private Node<T> tail;
+	
+	@Override
+	public boolean add(T element) {
+		if(element == null) {
+			return false;
+		}
+		
+		Node<T> newNode = new Node<>(element);
+		if(head == null) {
+			tail = head = newNode;
+		}
+		else {
+			tail.nextNode = newNode;
+			tail = newNode;
+		}
+		size++;
+	}
+
+	
+}

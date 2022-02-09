@@ -1,0 +1,13 @@
+package com.revature.p0.menus;
+
+import java.io.BufferedReader;
+
+import com.revature.p0.util.MenuRouter;
+
+public class Login extends Menu{
+	//private final BankService
+	public Login(BufferedReader consoleReader, MenuRouter router) {
+		super("Login", "/login", consoleReader, router);
+	}
+	
+}

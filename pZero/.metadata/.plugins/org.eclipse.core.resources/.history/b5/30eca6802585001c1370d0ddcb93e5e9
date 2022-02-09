@@ -1,0 +1,11 @@
+package com.revature.p0.models;
+
+import java.io.Serializable;
+
+public class Users implements Serializable {
+	
+	//Variables
+	private String userId;
+	private String firstName;
+	private String lastName;
+}

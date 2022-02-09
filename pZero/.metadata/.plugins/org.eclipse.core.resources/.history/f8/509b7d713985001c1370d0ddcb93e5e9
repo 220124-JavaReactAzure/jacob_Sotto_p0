@@ -1,0 +1,19 @@
+package com.revature.p0.util;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class AppState {
+	private static boolean isRunning;
+	private final MenuRouter router;
+	public AppState(MenuRouter router) {
+		super();
+		isRunning = true;
+		router = new MenuRouter();
+		BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		
+	}
+	
+	
+}
