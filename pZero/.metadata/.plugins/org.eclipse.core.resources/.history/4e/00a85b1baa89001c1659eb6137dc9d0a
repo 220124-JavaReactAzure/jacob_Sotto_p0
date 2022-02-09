@@ -18,7 +18,7 @@ public class BankAccountDao implements CrudDao<BankAccount> {
 		List<BankAccount> bankList = new LinkedList<>();
 		
 		try(Connection conn = ConnectionFactory.getInstance().getConnection()){
-			String sql = "select user_id from banks"; // selects all bank accounts in the bank table (can later include specific bank accounts)
+			String sql = "select bank_id from banks"; // selects all bank accounts in the bank table (can later include specific bank accounts)
 			Statement s = conn.createStatement();
 			
 			ResultSet rs = s.executeQuery(sql);
@@ -84,7 +84,7 @@ public boolean update(double updatedBalance) {
 		return null;
 	}
 
-	// will look for all the bank accounts in bank table
+	//
 	@Override
 	public List<BankAccount>findAll(){
 		List<BankAccount> bankList = new LinkedList<>();

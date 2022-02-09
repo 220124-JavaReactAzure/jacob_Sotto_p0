@@ -8,7 +8,6 @@ import static com.revature.p0.util.AppState.shutdown;
 
 public class Welcome extends Menu{
 
-	// allows Welcome menu to be viewed by appstate
 	public Welcome(BufferedReader consoleReader, MenuRouter router) {
 		super("Welcome", "/welcome", consoleReader, router);
 	}

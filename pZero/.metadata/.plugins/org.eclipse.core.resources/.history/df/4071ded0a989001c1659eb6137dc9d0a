@@ -18,7 +18,7 @@ public class BankAccountDao implements CrudDao<BankAccount> {
 		List<BankAccount> bankList = new LinkedList<>();
 		
 		try(Connection conn = ConnectionFactory.getInstance().getConnection()){
-			String sql = "select user_id from banks"; // selects all bank accounts in the bank table (can later include specific bank accounts)
+			String sql = "select * from banks";
 			Statement s = conn.createStatement();
 			
 			ResultSet rs = s.executeQuery(sql);
@@ -41,7 +41,7 @@ public boolean update(double updatedBalance) {
 		
 		try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
 
-			String sql = "update banks set bank_amount = ?"; // will update banks 
+			String sql = "update banks set bank_amount = ?";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setDouble(1, updatedBalance);
@@ -58,20 +58,20 @@ public boolean update(double updatedBalance) {
 		return false;
 	}
 
-	// creates new bank accounts
+
 	@Override
 	public BankAccount create(BankAccount newBAccount) {
 		try(Connection conn = ConnectionFactory.getInstance().getConnection()){
 			
-			newBAccount.setBankId(UUID.randomUUID().toString()); // initializes a randomly generated string
+			newBAccount.setBankId(UUID.randomUUID().toString());
 			
-			String sql = "insert into banks (bank_id, bank_amount, user_id) values (?, ?, ?)"; // sql statement that inserts itself data into the bank account table
+			String sql = "insert into banks (bank_id, bank_amount, user_id) values (?, ?, ?)";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
 			
-			ps.setString(1, newBAccount.getBankId()); //will set the bank id 
-			ps.setDouble(2, newBAccount.getBankBalance()); //sets the balance
-			ps.setString(3, newBAccount.getOwner().getUserId()); //finds the owner
+			ps.setString(1, newBAccount.getBankId());
+			ps.setDouble(2, newBAccount.getBankBalance());
+			ps.setString(3, newBAccount.getOwner().getUserId());
 			
 			int rowsInserted = ps.executeUpdate();
 			
@@ -84,7 +84,6 @@ public boolean update(double updatedBalance) {
 		return null;
 	}
 
-	// will look for all the bank accounts in bank table
 	@Override
 	public List<BankAccount>findAll(){
 		List<BankAccount> bankList = new LinkedList<>();

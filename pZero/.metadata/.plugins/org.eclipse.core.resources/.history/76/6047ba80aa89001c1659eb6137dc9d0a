@@ -35,7 +35,7 @@ public class Dashboard extends Menu {
 
 			String userSelection = consoleReader.readLine();
 			
-			//based on user selection will select a case to transfer the user to specified menus
+			//based on userselection will select a case to transfer the user to specified menus
 			switch(userSelection) {
 			case "1":
 				System.out.println("View Bank Information Selected");

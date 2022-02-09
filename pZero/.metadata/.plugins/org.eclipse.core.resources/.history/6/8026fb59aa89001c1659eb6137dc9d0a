@@ -22,7 +22,7 @@ public class BankInfo extends Menu{
 		newList = bankService.findAllBankAccounts();
 		if(newList.size() == 0) {
 			System.out.println("You do not have a bank account");
-			System.out.println("Rerouting to Dashboard\n");
+			System.out.println("Rerouting to Dashboard");
 			router.transfer("/dashboard");
 		}
 		double doubleBalance = 0;

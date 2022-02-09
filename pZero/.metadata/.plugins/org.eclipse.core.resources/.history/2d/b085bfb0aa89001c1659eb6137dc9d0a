@@ -84,7 +84,7 @@ public boolean update(double updatedBalance) {
 		return null;
 	}
 
-	// will look for all the bank accounts in bank table
+	//
 	@Override
 	public List<BankAccount>findAll(){
 		List<BankAccount> bankList = new LinkedList<>();
